@@ -30,7 +30,7 @@ export const PostsProvider = ({ children }: { children: ReactNode }) => {
           console.warn("No posts found.");
         }
       } catch (error) {
-        setError("Failed to fetch posts");
+        setError(`${error}: Failed to fetch posts`);
       } finally {
         setLoading(false);
       }
